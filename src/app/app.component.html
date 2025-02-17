@@ -1,0 +1,43 @@
+<table>
+  <tr>
+    <td colspan="3" class="video-cell">
+      <div class="loading">Loading ML Model ...</div>
+      <video style="display: none" #video width="640" height="480" autoplay [srcObject]="stream"></video>
+      <canvas #canvas width="640" height="480"></canvas>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <div class="box" [ngClass]="{'active': selected === 1}" (click)="toggle(1)">
+        1
+      </div>
+    </td>
+    <td align="center">
+      <div class="box" [ngClass]="{'active': selected === 2}" (click)="toggle(2)">
+        2
+      </div>
+    </td>
+    <td align="center">
+      <div class="box" [ngClass]="{'active': selected === 3}" (click)="toggle(3)">
+        3
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <button class="reset" (click)="toggle(0)">Reset</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center" *ngIf="swipe$ | async as swipe">
+      <div class="finger">
+        <span *ngIf="fingers$ | async as fingers">Finger(s): {{fingers}}</span>
+      </div>
+      <div *ngIf="swipe !== 'none'" class="swipe">
+        <span *ngIf="swipe === 'left'">👈</span>
+        Swipe {{swipe}}
+        <span *ngIf="swipe === 'right'">👉</span>
+      </div>
+    </td>
+  </tr>
+</table>

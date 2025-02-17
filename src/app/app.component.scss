@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    border: 1px;
+    max-width: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box {
+    font-size: 80px;
+    font-weight: bold;
+    background-color: gray;
+    border: 10px solid darkgray;
+    width: 200px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: darkturquoise;
+    border: 10px solid blue;
+    color: lightgray;
+}
+
+.reset {
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: azure;
+    cursor: pointer;
+}
+
+.video-cell {
+    height: 500px;
+}
+
+.loading {
+    position: fixed;
+    top: 240px;
+    left: 300px;
+    z-index: -1;
+    font-size: 24px;
+}
+
+.swipe {
+    margin-top: 20px;
+    font-size: 48px;
+}
+
+.finger {
+    margin-top: 30px;
+    font-size: 36px;
+}
